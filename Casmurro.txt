@@ -1,0 +1,31 @@
+soma_frase_dado_lusiadas=0
+soma_frase_dado_casmurro=0
+palavras_frase=['contou','que','joão','como','santo','se','verá','vestido','de','maneira','que','virão','a','barba','do','marido']
+for i in palavras_frase:
+    soma_frase_dado_lusiadas+=tabela_lusiadas_relativa[i]
+    soma_frase_dado_casmurro+=tabela_casmurro_relativa[i]
+print(soma_frase_dado_casmurro)
+print(soma_frase_dado_lusiadas)
+
+palavras=tabela_portugues_relativa.index
+soma_casmurro=0
+soma_lusiadas=0
+for i in palavras:
+    if i in tabela_lusiadas_relativa:
+        soma_lusiadas+=tabela_portugues_relativa[i]
+    if i in tabela_casmurro_relativa:
+        soma_casmurro+=tabela_portugues_relativa[i]
+print(soma_casmurro)
+print(soma_lusiadas)
+print(palavras)
+
+soma_frase=0
+for i in palavras_frase:
+    soma_frase+=tabela_portugues_relativa[i]
+print(soma_frase)
+
+p_lusiadas_dado_frase = soma_frase_dado_lusiadas*soma_lusiadas/soma_frase
+p_casmurro_dado_frase = soma_frase_dado_casmurro*soma_casmurro/soma_frase
+
+print(p_lusiadas_dado_frase)
+print(p_casmurro_dado_frase)
